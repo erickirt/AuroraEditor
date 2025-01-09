@@ -45,7 +45,7 @@ final class ExtensionInstallationViewModel: ObservableObject {
 
     /// Fetch extensions.
     func fetchExtensions() {
-        AuroraNetworking().request(baseURL: Constants.auroraEditorBaseURL,
+        AuroraNetworking().request(baseURL: "staging.auroraeditor.com/v1",
                                    path: Constants.extensions,
                                    useAuthType: .none,
                                    method: .GET,
