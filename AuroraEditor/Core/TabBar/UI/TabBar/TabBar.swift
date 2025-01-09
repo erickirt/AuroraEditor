@@ -145,7 +145,7 @@ struct TabBar: View {
             leadingAccessories
             // Tab bar items.
             GeometryReader { geometryProxy in
-                ScrollView(.horizontal, showsIndicators: false) {
+                ScrollView { // Reported incorrect behaviour if axis = .horizontal FB16275535 #788
                     ScrollViewReader { scrollReader in
                         HStack(
                             alignment: .center,
@@ -187,6 +187,7 @@ struct TabBar: View {
                                     )
                                 }
                             }
+                            Spacer() // Remove when .horizontal is fixed
                         }
                         // This padding is to hide dividers at two ends under the accessory view divider.
                         .padding(.horizontal, 0)
