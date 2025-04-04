@@ -79,3 +79,6 @@ indent_size = wcUnitTest
 # testMultipleMatchesNumberic
 [file{0..9}.mnUnitTest]
 indent_size = mnUnitTest
+
+[trigger]
+ident_size = 0
